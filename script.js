@@ -1,12 +1,18 @@
+let notificationUnreaded = 0
 async function displayNotifications() {
   const response = await fetch('./data.json');
   const data = await response.json();
   const notificationsContainer = document.getElementsByTagName('main')[0];
-    console.log(data);
+
   data.forEach(notification => {
-    const { user, time, action, message, post, avatar, group } = notification;
+    const { user, time, action, message, post, avatar, group, wasReded } = notification;
     let notificationHTML;
     let notificationElement = document.createElement('div');
+    if(wasReded){
+      notificationElement.classList.add('unread');
+      notificationUnreaded++;
+      document.getElementById('number').innerText = notificationUnreaded;
+    }
     notificationElement.classList.add('notification');
     if (action === 'followed you' || action === 'left the group' || action === 'joined your group') {
         notificationElement.classList.add('followed');
@@ -69,11 +75,24 @@ async function displayNotifications() {
       `;
     }
     notificationElement.innerHTML = notificationHTML;
-    console.log(notificationElement);
-    console.log(notificationsContainer);
+    notificationElement.addEventListener('click', () => {
+      notificationElement.classList.remove('unread');
+      notificationUnreaded--;
+      document.getElementById('number').innerText = notificationUnreaded;
+    });
+
     notificationsContainer.appendChild(notificationElement);
 
   });
 }
 
 displayNotifications();
+
+document.querySelector('button').addEventListener('click', () => {
+  const unreadNotifications = document.querySelectorAll('.unread');
+  unreadNotifications.forEach(notification => {
+    notification.classList.remove('unread');
+  });
+  notificationUnreaded = 0;
+  document.getElementById('number').innerText = notificationUnreaded;
+});

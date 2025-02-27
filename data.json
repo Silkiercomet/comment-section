@@ -6,7 +6,8 @@
     "message": null,
     "group": null,
     "post": "My first tournament today!",
-    "avatar": "./assets/images/avatar-mark-webber.webp"
+    "avatar": "./assets/images/avatar-mark-webber.webp",
+    "wasReded": true
   },
   {
     "user": "Angela Gray",
@@ -15,7 +16,8 @@
     "message": null,
     "post": null,
     "group": null,
-    "avatar": "./assets/images/avatar-angela-gray.webp"
+    "avatar": "./assets/images/avatar-angela-gray.webp",
+    "wasReded": true
   },
   {
     "user": "Jacob Thompson",
@@ -23,7 +25,8 @@
     "action": "joined your group",
     "message": null,
     "group": "Chess Club",
-    "avatar": "./assets/images/avatar-jacob-thompson.webp"
+    "avatar": "./assets/images/avatar-jacob-thompson.webp",
+    "wasReded": true
   },
   {
     "user": "Rizky Hasanuddin",
@@ -32,7 +35,8 @@
     "message": "Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.",
     "group": null,
     "post": null,
-    "avatar": "./assets/images/avatar-rizky-hasanuddin.webp"
+    "avatar": "./assets/images/avatar-rizky-hasanuddin.webp",
+    "wasReded": false
   },
   {
     "user": "Kimberly Smith",
@@ -41,7 +45,8 @@
     "message": null,
     "group": null,
     "post": "./assets/images/image-chess.webp",
-    "avatar": "./assets/images/avatar-kimberly-smith.webp"
+    "avatar": "./assets/images/avatar-kimberly-smith.webp",
+    "wasReded": false
   },
   {
     "user": "Nathan Peterson",
@@ -50,7 +55,8 @@
     "message": null,
     "group": null,
     "post": "5 end-game strategies to increase your win rate",
-    "avatar": "./assets/images/avatar-nathan-peterson.webp"
+    "avatar": "./assets/images/avatar-nathan-peterson.webp",
+    "wasReded": false
   },
   {
     "user": "Anna Kim",
@@ -58,6 +64,7 @@
     "action": "left the group",
     "message": null,
     "group": "Chess Club",
-    "avatar": "./assets/images/avatar-anna-kim.webp"
+    "avatar": "./assets/images/avatar-anna-kim.webp",
+    "wasReded": false
   }
 ]
