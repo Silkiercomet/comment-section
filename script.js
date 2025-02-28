@@ -75,11 +75,16 @@ async function displayNotifications() {
       `;
     }
     notificationElement.innerHTML = notificationHTML;
-    notificationElement.addEventListener('click', () => {
-      notificationElement.classList.remove('unread');
-      notificationUnreaded--;
-      document.getElementById('number').innerText = notificationUnreaded;
-    });
+    if(wasReded){
+      notificationElement.addEventListener('click', (e) => {
+        if (notificationElement.classList.contains('unread')){
+          notificationElement.classList.remove('unread');
+          notificationUnreaded--;
+          document.getElementById('number').innerText = notificationUnreaded;
+        };
+      });
+    }
+
 
     notificationsContainer.appendChild(notificationElement);
 
