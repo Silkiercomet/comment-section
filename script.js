@@ -23,7 +23,7 @@ async function displayNotifications() {
             <img src="${avatar}">
           </figure>
           <div>
-            <strong>${user}</strong> ${action} ${!group ? group : ""}<br>
+            <strong>${user}</strong> ${action} ${group ? `<strong>${group}</strong>` : ""}<br>
             <time>${time}</time>
           </div>
         
@@ -36,7 +36,7 @@ async function displayNotifications() {
             <img src="${avatar}">
           </figure>
           <div>
-            <strong>${user}</strong> ${action} <span>${post}</span><br>
+            <strong>${user}</strong> ${action} <strong class="postalert">${post}</strong><br>
             <time>${time}</time>
           </div>
         
